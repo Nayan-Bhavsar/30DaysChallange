@@ -12,67 +12,59 @@ Concepts Used:
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>To-Do List</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo-box">
+      <h2>To-Do List</h2>
 
-  <div class="todo-box">
-    <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Enter task" />
 
-    <input
-      type="text"
-      id="taskInput"
-      placeholder="Enter task"
-    />
+      <button onclick="addTask()">Add Task</button>
 
-    <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+    </div>
 
-    <ul id="taskList"></ul>
-  </div>
+    <script>
+      var tasks = [];
 
-  <script>
-    // Array to store tasks
-    var tasks = [];
+      function addTask() {
+        var input = document.getElementById("taskInput");
+        var taskText = input.value;
 
-    // Function to add a task
-    function addTask() {
-      var input = document.getElementById("taskInput");
-      var taskText = input.value;
+        if (taskText === "") {
+          alert("Please enter a task");
+          return;
+        }
 
-      if (taskText === "") {
-        alert("Please enter a task");
-        return;
+        tasks.push(taskText);
+        input.value = "";
+        displayTasks();
       }
 
-      tasks.push(taskText);
-      input.value = "";
-      displayTasks();
-    }
-
-    // Function to delete a task
-    function deleteTask(index) {
-      tasks.splice(index, 1);
-      displayTasks();
-    }
-
-    // Function to display tasks
-    function displayTasks() {
-      var list = document.getElementById("taskList");
-      list.innerHTML = "";
-
-      for (var i = 0; i < tasks.length; i++) {
-        var li = document.createElement("li");
-        li.innerHTML =
-          tasks[i] +
-          ' <span class="delete" onclick="deleteTask(' + i + ')">✖</span>';
-
-        list.appendChild(li);
+      function deleteTask(index) {
+        tasks.splice(index, 1);
+        displayTasks();
       }
-    }
-  </script>
 
-</body>
+      function displayTasks() {
+        var list = document.getElementById("taskList");
+        list.innerHTML = "";
+
+        for (var i = 0; i < tasks.length; i++) {
+          var li = document.createElement("li");
+          li.innerHTML =
+            tasks[i] +
+            ' <span class="delete" onclick="deleteTask(' +
+            i +
+            ')">✖</span>';
+
+          list.appendChild(li);
+        }
+      }
+    </script>
+  </body>
 </html>

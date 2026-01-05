@@ -4,27 +4,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #a5ed8b;
+  background: #626058;
   font-family: Arial, sans-serif;
 }
 
-.todo-box {
-  background: #c2f0af;
+.game-box {
+  background: #7b6f6f;
   padding: 30px;
   border-radius: 12px;
   width: 320px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-h2 {
   text-align: center;
-  margin-bottom: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 input {
   width: 100%;
   padding: 8px;
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-size: 16px;
 }
 
@@ -39,23 +35,7 @@ button {
   cursor: pointer;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.message {
   margin-top: 15px;
-}
-
-li {
-  background: white;
-  padding: 8px;
-  margin-bottom: 8px;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 4px;
-}
-
-.delete {
-  color: red;
-  cursor: pointer;
   font-weight: bold;
 }
