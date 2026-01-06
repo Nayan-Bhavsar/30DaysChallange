@@ -1,0 +1,27 @@
+<!--
+Day 06 – Theme Toggle (Light / Dark Mode)
+A simple theme toggle project using JavaScript.
+Concepts: events, classList.toggle() method, DOM manipulation.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Day 6 Theme Toggle</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h2>Theme Toggle</h2>
+      <p>Click the button to switch theme</p>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+
+    <script>
+      function toggleTheme() {
+        const body = document.body;
+        body.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
