@@ -1,0 +1,49 @@
+<!--
+  Day 09 – Store Form Data in localStorage
+  Stores validated form data in browser localStorage
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form with localStorage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Register</h2>
+
+  <form onsubmit="saveToLocalStorage(event)">
+    <label>Username</label>
+    <input type="text" id="username">
+
+    <label>Email</label>
+    <input type="email" id="email">
+
+    <label>Password</label>
+    <input type="password" id="password">
+
+    <div class="gender">
+      <label>Gender:</label>
+      <label><input type="radio" name="gender" value="Male"> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+    </div>
+
+    <div class="terms">
+      <label>
+        <input type="checkbox" id="terms"> I agree to the terms & conditions
+      </label>
+    </div>
+
+    <button type="submit">Submit</button>
+
+    <div class="error" id="errorMsg"></div>
+    <div class="success" id="successMsg"></div>
+  </form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

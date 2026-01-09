@@ -1,4 +1,4 @@
-# Day 07 – Form Validator 🧾
+# Day 08 – Form Validator 🧾
 
 ## 📌 Description
 This project is a **Form Validator** built using **HTML, CSS, and JavaScript** as part of my **30-Day JavaScript Challenge**.  
