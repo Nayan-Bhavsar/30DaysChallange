@@ -1,0 +1,43 @@
+<!--
+    Day 10 – Create & Read (CRUD)
+    Fields: username, email, password, gender
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create & Read Users</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Create & Read Users</h2>
+
+      <form onsubmit="addUser(event)">
+        <input type="text" id="username" placeholder="Username" />
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Password" />
+
+        <div class="gender">
+          <label>Gender:</label>
+          <label>Male<input type="radio" name="gender" value="Male" /></label>
+          <label>Female<input type="radio" name="gender" value="Female"/></label>
+        </div>
+        <button type="submit">Add User</button>
+
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Gender</th>
+          </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
