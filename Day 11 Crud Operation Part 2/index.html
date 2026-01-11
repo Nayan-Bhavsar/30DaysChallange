@@ -1,0 +1,50 @@
+<!--
+  Day 11 – Update & Delete (CRUD)
+  Fields: username, email, password, gender
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Day 11</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>CRUD - Update & Delete</h2>
+
+      <!-- Form -->
+      <form onsubmit="saveUser(event)" autocomplete="off">
+        <input type="text" id="username" placeholder="Username" />
+        <input type="email" id="email" placeholder="Email" />
+        <input type="password" id="password" placeholder="Password" />
+
+        <div class="gender">
+          <strong>Gender:</strong>
+          <label><input type="radio" name="gender" value="Male" /> Male</label>
+          <label
+            ><input type="radio" name="gender" value="Female" /> Female</label
+          >
+        </div>
+
+        <button type="submit" class="save-btn">Save User</button>
+      </form>
+
+      <!-- Table for Displaying(Read) User -->
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Gender</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
