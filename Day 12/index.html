@@ -1,0 +1,29 @@
+<!--
+Day 12 – Search User List
+Simple search functionality using JavaScript
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Search</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>User Search</h2>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search by name or email"
+        onkeyup="searchUsers()"/>
+
+      <ul id="userList"></ul>
+
+      <div id="noResult" class="no-result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
