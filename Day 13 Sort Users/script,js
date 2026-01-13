@@ -1,0 +1,43 @@
+const users = [
+  { name: "Nayan", email: "nayan@gmail.com" },
+  { name: "Abhi", email: "ultraabhi@gmail.com" },
+  { name: "Kushaal", email: "kushaal@gmail.com" },
+  { name: "Kartik", email: "legendKartik@gmail.com" },
+  { name: "Rohit", email: "therohit@gmail.com" },
+];
+
+// Displaying Users For First Time
+displayUsers();
+
+function displayUsers() {
+  const userList = document.getElementById("userList");
+  userList.innerHTML = "";
+
+  users.forEach((user) => {
+    const li = document.createElement("li");
+    li.innerText = `${user.name} - ${user.email}`;
+    userList.appendChild(li);
+  });
+}
+
+function sortUsers() {
+  const sortValue = document.getElementById("sortSelect").value;
+
+  if (sortValue === "name-asc") {
+    users.sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  if (sortValue === "name-desc") {
+    users.sort((a, b) => b.name.localeCompare(a.name));
+  }
+
+  if (sortValue === "email-asc") {
+    users.sort((a, b) => a.email.localeCompare(b.email));
+  }
+
+  if (sortValue === "email-desc") {
+    users.sort((a, b) => b.email.localeCompare(a.email));
+  }
+
+  displayUsers();
+}
