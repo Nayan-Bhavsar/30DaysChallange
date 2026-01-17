@@ -1,0 +1,42 @@
+<!--
+  Day 17 – Form Progress Indicator With Validation
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Progress Indicator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Form Progress</h2>
+
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+
+      <div class="percentage" id="percentage">0% Completed</div>
+
+      <form onsubmit="submitForm(event)">
+        <input type="text" id="username" placeholder="Username" oninput="updateProgress()"/>
+        <div class="error" id="userError"></div>
+
+        <input type="email" id="email" placeholder="Email" oninput="updateProgress()"/>
+        <div class="error" id="emailError"></div>
+
+        <input type="password" id="password" placeholder="Password" oninput="updateProgress()"/>
+        <div class="error" id="passError"></div>
+
+        <input type="text" id="city" placeholder="City" oninput="updateProgress()"/>
+        <div class="error" id="cityError"></div>
+
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+      </form>
+
+      <div class="success" id="successMsg"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
