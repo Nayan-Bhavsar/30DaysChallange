@@ -1,0 +1,29 @@
+<!--
+    Day 19 – OTP Verification System
+    Generate and verify a 6-digit OTP
+  -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>OTP Verification</h2>
+
+      <div class="otp-box" id="otpBox">------</div>
+
+      <button onclick="generateOTP()">Generate OTP</button>
+
+      <input type="number" id="userOtp" placeholder="Enter OTP" />
+
+      <button onclick="verifyOTP()">Verify OTP</button>
+
+      <div class="message" id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
