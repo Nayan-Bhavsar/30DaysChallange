@@ -1,0 +1,30 @@
+<!--
+  Day 20 – OTP System with Expiry Timer
+  OTP expires after 60 seconds
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OTP with Expiry Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>OTP Verification</h2>
+
+      <div class="otp-box" id="otpBox">------</div>
+      <div class="timer" id="timer">OTP expires in 60s</div>
+
+      <button onclick="generateOTP()">Generate OTP</button>
+
+      <input type="number" id="userOtp" placeholder="Enter OTP" />
+
+      <button onclick="verifyOTP()" id="verifyBtn">Verify OTP</button>
+
+      <div class="message" id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
