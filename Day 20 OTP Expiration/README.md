@@ -36,4 +36,4 @@ This project is part of my **30-Day JavaScript Challenge**.
 ---
 
 ## Status
-✅ Day 19 Completed
+✅ Day 20 Completed
