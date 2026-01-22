@@ -1,4 +1,4 @@
-# Day 21 – Word Counter 📝
+# Day 22 – Word Counter 📝
 
 ## 📌 Description
 This project implements a **Word Counter** using JavaScript that counts words and characters in real time while enforcing a maximum character limit.
