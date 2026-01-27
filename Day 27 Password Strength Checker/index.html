@@ -1,0 +1,35 @@
+<!--
+    Day 27
+    Password Strength Checker
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Password Strength Checker</h2>
+
+    <input type="text" id="password" placeholder="Enter password">
+
+    <div class="meter">
+        <div id="strengthBar"></div>
+    </div>
+
+    <ul class="rules">
+        <li id="lengthRule">✔ At least 8 characters</li>
+        <li id="upperRule">✔ One uppercase letter</li>
+        <li id="numberRule">✔ One number</li>
+        <li id="specialRule">✔ One special character</li>
+    </ul>
+
+    <p id="strengthText"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

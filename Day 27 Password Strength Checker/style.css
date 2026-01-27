@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 25px;
+    width: 360px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.meter {
+    background: #ddd;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#strengthBar {
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    transition: width 0.3s;
+}
+
+.rules {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.rules li {
+    font-size: 14px;
+    color: #999;
+}
+
+.rules li.valid {
+    color: green;
+}
+
+.weak {
+    background: red;
+}
+
+.medium {
+    background: orange;
+}
+
+.strong {
+    background: green;
+}
