@@ -1,0 +1,44 @@
+<!--
+    Day 28 
+    Password Visibility Toggle
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Password Strength Checker</h2>
+
+    <form id="passwordForm">
+        <div class="input-box">
+            <input type="password" id="password" placeholder="Enter password">
+            <span id="toggle">👁️</span>
+        </div>
+
+        <div class="meter">
+            <div id="strengthBar"></div>
+        </div>
+
+        <ul class="rules">
+            <li id="lengthRule">✔ At least 8 characters</li>
+            <li id="upperRule">✔ One uppercase letter</li>
+            <li id="numberRule">✔ One number</li>
+            <li id="specialRule">✔ One special character</li>
+        </ul>
+
+        <p id="strengthText"></p>
+
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+
+    <p id="successMessage"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
