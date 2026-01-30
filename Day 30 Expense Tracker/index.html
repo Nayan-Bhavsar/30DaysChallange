@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Finance Tracker 💰</h2>
+
+    <div class="summary">
+        <div>
+            <p>Total Balance</p>
+            <h3 id="balance">₹0</h3>
+        </div>
+        <div>
+            <p>Total Income</p>
+            <h3 class="income" id="income">₹0</h3>
+        </div>
+        <div>
+            <p>Total Expense</p>
+            <h3 class="expense" id="expense">₹0</h3>
+        </div>
+    </div>
+
+    <form id="transactionForm">
+        <input type="text" id="description" placeholder="Enter description">
+        <input type="number" id="amount" placeholder="Enter amount">
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <button type="submit">Add Transaction</button>
+        <p class="error" id="errorMsg"></p>
+    </form>
+
+    <ul id="transactionList">
+        <p class="empty">No transactions added yet</p>
+    </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
